@@ -1,13 +1,13 @@
 version: '2'
 services:
-  mobycounter:
+  mobycounterservice:
     container_name: mobycounter
     image: mobycounter
     links:
       - "redis:redis"
     ports: 
       - "3000:3000"
-  redis:
+  redisservice:
     container_name: redis
     image: redis:alpine
     volumes:
